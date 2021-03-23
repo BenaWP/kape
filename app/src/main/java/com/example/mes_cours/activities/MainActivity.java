@@ -1,10 +1,12 @@
-package com.example.mes_cours;
+package com.example.mes_cours.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import android.os.Bundle;
 import android.widget.Toast;
+
+import com.example.mes_cours.R;
 
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
@@ -39,17 +41,17 @@ public class MainActivity extends AppCompatActivity {
                     case 1:
                         // when id is 1
                         // here second stuff
-                        fragment = new SecondFragment();
+                        fragment = new com.example.mes_cours.fragments.SecondFragment();
                         break;
                     case 2 :
                         // when id is 2
                         // here Premiere stuff
-                        fragment = new PremiereFragment();
+                        fragment = new com.example.mes_cours.fragments.PremiereFragment();
                         break;
                     case 3 :
                         // when id is 3
                         // here Terminal stuff
-                        fragment = new TerminalFragment();
+                        fragment = new com.example.mes_cours.fragments.TerminalFragment();
                 }
                 // Load fragment
                 loadFragment(fragment);
