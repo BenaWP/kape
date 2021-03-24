@@ -3,7 +3,9 @@ package com.example.mes_cours.activities;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import android.net.wifi.WifiManager;
 import android.os.Bundle;
+import android.text.format.Formatter;
 import android.widget.Toast;
 
 import com.example.mes_cours.R;
@@ -20,6 +22,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // get ip
+        WifiManager wifiManager = (WifiManager) getApplicationContext().getSystemService(WIFI_SERVICE);
+        String ipAddress = Formatter.formatIpAddress(wifiManager.getConnectionInfo().getIpAddress());
+        Toast.makeText(getApplicationContext()
+                , " " +ipAddress
+                ,Toast.LENGTH_SHORT).show();
 
         // Assign variable
         meowBottomNavigation = findViewById(R.id.bottom_navigation);

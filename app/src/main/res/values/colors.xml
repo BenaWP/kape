@@ -11,5 +11,6 @@
     <color name="app_main_color">#fff</color>
     <color name="app_second_color">#A63C415E</color>
     <color name="app_sombre_color">#3c415e</color>
+    <color name="app_fafa_color">#e1e1e1</color>
 
 </resources>
