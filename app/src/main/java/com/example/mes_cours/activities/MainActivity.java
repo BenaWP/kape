@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment;
 
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.text.format.Formatter;
 import android.widget.Toast;
 
@@ -23,11 +24,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // get ip
-        WifiManager wifiManager = (WifiManager) getApplicationContext().getSystemService(WIFI_SERVICE);
-        String ipAddress = Formatter.formatIpAddress(wifiManager.getConnectionInfo().getIpAddress());
+        // get an unique android ID
+        String android_id = Settings.Secure.getString(this.getContentResolver(),
+                Settings.Secure.ANDROID_ID);
         Toast.makeText(getApplicationContext()
-                , " " +ipAddress
+                , " " +android_id
                 ,Toast.LENGTH_SHORT).show();
 
         // Assign variable
