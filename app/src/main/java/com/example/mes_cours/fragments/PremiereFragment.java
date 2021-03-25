@@ -1,5 +1,6 @@
 package com.example.mes_cours.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,7 +8,9 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
+import com.example.mes_cours.ListesMatieresPremiereActivity;
 import com.example.mes_cours.R;
 
 /**
@@ -61,6 +64,18 @@ public class PremiereFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_premiere, container, false);
+        View premiereFragmentView = inflater.inflate(R.layout.fragment_premiere, container, false);
+
+        ImageView folderCoursPremiere = premiereFragmentView.findViewById(R.id.folder_cours_p);
+        folderCoursPremiere.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), ListesMatieresPremiereActivity.class);
+                intent.putExtra("data",  "Some data");
+                startActivity(intent);
+            }
+        });
+
+        return premiereFragmentView;
     }
 }
