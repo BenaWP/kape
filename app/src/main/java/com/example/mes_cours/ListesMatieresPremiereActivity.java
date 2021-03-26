@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.GridView;
 
+import com.example.mes_cours.adapters.ImageAdapter;
 import com.example.mes_cours.ui.main.ListesMatieresPremiereFragment;
 
 public class ListesMatieresPremiereActivity extends AppCompatActivity {
@@ -24,6 +26,9 @@ public class ListesMatieresPremiereActivity extends AppCompatActivity {
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
+
+        GridView gridview = (GridView) findViewById(R.id.listes_matieres_premiere_gridview);
+        gridview.setAdapter(new ImageAdapter(this));
     }
 
     public boolean onOptionsItemSelected(MenuItem item){
