@@ -51,6 +51,25 @@ public class ListesMatieresActivity extends AppCompatActivity {
                         Intent intent = new Intent(ListesMatieresActivity.this, MathsActivity.class);
                         intent.putExtra("Maths", "Math data");
                         startActivity(intent);
+                        break;
+                    case 1:
+                        Toast.makeText(ListesMatieresActivity.this, "Phys", Toast.LENGTH_SHORT).show();
+                        break;
+                    case 2:
+                        Toast.makeText(ListesMatieresActivity.this, "Sciences", Toast.LENGTH_SHORT).show();
+                        break;
+                    case 3:
+                        Toast.makeText(ListesMatieresActivity.this, "Malag", Toast.LENGTH_SHORT).show();
+                        break;
+                    case 4:
+                        Toast.makeText(ListesMatieresActivity.this, "Francais", Toast.LENGTH_SHORT).show();
+                        break;
+                    case 5:
+                        Toast.makeText(ListesMatieresActivity.this, "Anglais", Toast.LENGTH_SHORT).show();
+                        break;
+                    case 6:
+                        Toast.makeText(ListesMatieresActivity.this, "Histo-geo", Toast.LENGTH_SHORT).show();
+                        break;
                 }
             }
         });
