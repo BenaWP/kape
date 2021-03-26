@@ -35,8 +35,8 @@ public class ListesMatieresActivity extends AppCompatActivity {
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
 
-        GridView gridview = (GridView) findViewById(R.id.listes_matieres_premiere_gridview);
-        gridview.setAdapter(new ImageAdapter(this));
+        GridView listesMatieresPremiereGridview = (GridView) findViewById(R.id.listes_matieres_premiere_gridview);
+        listesMatieresPremiereGridview.setAdapter(new ImageAdapter(this));
     }
 
     public boolean onOptionsItemSelected(MenuItem item){
