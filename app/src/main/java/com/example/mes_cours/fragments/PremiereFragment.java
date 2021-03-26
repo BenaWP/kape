@@ -10,7 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import com.example.mes_cours.ListesMatieresPremiereActivity;
+import com.example.mes_cours.activities.premieres.ListesMatieresPremiereActivity;
 import com.example.mes_cours.R;
 
 /**

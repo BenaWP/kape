@@ -5,7 +5,7 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ListesMatieresPremiereActivity">
+    tools:context=".activities.premieres.ListesMatieresPremiereActivity">
 
     <GridView
         android:id="@+id/listes_matieres_premiere_gridview"

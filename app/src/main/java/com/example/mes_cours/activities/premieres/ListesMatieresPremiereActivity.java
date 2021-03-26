@@ -1,4 +1,4 @@
-package com.example.mes_cours;
+package com.example.mes_cours.activities.premieres;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.GridView;
 
+import com.example.mes_cours.R;
 import com.example.mes_cours.adapters.ImageAdapter;
 import com.example.mes_cours.ui.main.ListesMatieresPremiereFragment;
 
