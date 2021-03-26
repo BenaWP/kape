@@ -76,9 +76,23 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public Unit invoke(MeowBottomNavigation.Model model) {
                 // display toast
-                Toast.makeText(getApplicationContext()
-                        , " " + model.getId()
-                        ,Toast.LENGTH_SHORT).show();
+                switch(model.getId()){
+                    case 1:
+                        Toast.makeText(getApplicationContext()
+                                , "Seconde"
+                                ,Toast.LENGTH_SHORT).show();
+                        break;
+                    case 2:
+                        Toast.makeText(getApplicationContext()
+                                , "Première"
+                                ,Toast.LENGTH_SHORT).show();
+                        break;
+                    case 3:
+                        Toast.makeText(getApplicationContext()
+                                , "Terminale"
+                                ,Toast.LENGTH_SHORT).show();
+                        break;
+                }
                 return null;
             }
         });
