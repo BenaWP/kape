@@ -4,18 +4,22 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.mes_cours.R;
+import com.example.mes_cours.activities.premieres.maths.MathsActivity;
 import com.example.mes_cours.ui.premiere.ListesMatieresPremiereFragment;
 
 public class ListesMatieresActivity extends AppCompatActivity {
@@ -37,6 +41,19 @@ public class ListesMatieresActivity extends AppCompatActivity {
 
         GridView listesMatieresPremiereGridview = (GridView) findViewById(R.id.listes_matieres_premiere_gridview);
         listesMatieresPremiereGridview.setAdapter(new ImageAdapter(this));
+
+        // Click sur cahque matiere
+        listesMatieresPremiereGridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                switch(position){
+                    case 0:
+                        Intent intent = new Intent(ListesMatieresActivity.this, MathsActivity.class);
+                        intent.putExtra("Maths", "Math data");
+                        startActivity(intent);
+                }
+            }
+        });
     }
 
     public boolean onOptionsItemSelected(MenuItem item){
