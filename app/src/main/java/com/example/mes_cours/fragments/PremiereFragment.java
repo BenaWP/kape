@@ -10,7 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import com.example.mes_cours.activities.premieres.ListesMatieresPremiereActivity;
+import com.example.mes_cours.activities.premieres.ListesMatieresActivity;
 import com.example.mes_cours.R;
 
 /**
@@ -63,14 +63,16 @@ public class PremiereFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         // Inflate the layout for this fragment
         View premiereFragmentView = inflater.inflate(R.layout.fragment_premiere, container, false);
 
         ImageView folderCoursPremiere = premiereFragmentView.findViewById(R.id.folder_cours_p);
+
         folderCoursPremiere.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), ListesMatieresPremiereActivity.class);
+                Intent intent = new Intent(getActivity(), ListesMatieresActivity.class);
                 intent.putExtra("data",  "Some data");
                 startActivity(intent);
             }

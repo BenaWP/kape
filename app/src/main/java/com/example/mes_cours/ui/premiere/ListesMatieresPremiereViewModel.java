@@ -1,4 +1,4 @@
-package com.example.mes_cours.ui.main;
+package com.example.mes_cours.ui.premiere;
 
 import androidx.lifecycle.ViewModel;
 
