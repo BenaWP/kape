@@ -9,9 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/MyNoActionBarTheme">
+        <activity android:name=".activities.premieres.maths.num.ListesMathsNumActivity"></activity>
         <activity
             android:name=".activities.premieres.maths.MathsActivity"
-            android:theme="@style/MySimpleDayNightTheme"/>
+            android:theme="@style/MySimpleDayNightTheme" />
         <activity
             android:name=".activities.premieres.ListesMatieresActivity"
             android:theme="@style/MySimpleDayNightTheme" />

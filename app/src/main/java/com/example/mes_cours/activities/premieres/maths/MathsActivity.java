@@ -4,18 +4,23 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.mes_cours.R;
+import com.example.mes_cours.activities.premieres.ListesMatieresActivity;
+import com.example.mes_cours.activities.premieres.maths.num.ListesMathsNumActivity;
 import com.example.mes_cours.ui.premiere.ListesMatieresPremiereFragment;
 
 public class MathsActivity extends AppCompatActivity {
@@ -35,8 +40,25 @@ public class MathsActivity extends AppCompatActivity {
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
 
-        GridView gridview = (GridView) findViewById(R.id.listes_maths_premiere_gridview);
-        gridview.setAdapter(new ImageAdapter(this));
+        GridView listesMathsPremiereGridview = (GridView) findViewById(R.id.listes_maths_premiere_gridview);
+        listesMathsPremiereGridview.setAdapter(new ImageAdapter(this));
+
+        // Click sur Nume ou Géom
+        listesMathsPremiereGridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                switch(position){
+                    case 0:
+                        Intent intent = new Intent(MathsActivity.this, ListesMathsNumActivity.class);
+                        intent.putExtra("Maths", "Math data Num");
+                        startActivity(intent);
+                        break;
+                    case 1:
+                        Toast.makeText(MathsActivity.this, "Geom", Toast.LENGTH_SHORT).show();
+                        break;
+                }
+            }
+        });
     }
 
     public boolean onOptionsItemSelected(MenuItem item){
