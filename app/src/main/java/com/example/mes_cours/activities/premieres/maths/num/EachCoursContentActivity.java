@@ -3,6 +3,7 @@ package com.example.mes_cours.activities.premieres.maths.num;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.os.Bundle;
@@ -13,21 +14,22 @@ import com.example.mes_cours.MyService;
 import com.example.mes_cours.R;
 
 public class EachCoursContentActivity extends AppCompatActivity {
-    ActionBar actionBar;
+    Toolbar toolBar;
     WebView mywebView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-       /* this.actionBar = getSupportActionBar();
-        this.actionBar.setTitle(MyService.title);
-        this.actionBar.setDisplayHomeAsUpEnabled(true);*/
-
         setContentView(R.layout.activity_each_cours_content);
 
-        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
-        setSupportActionBar(myToolbar);
+        this.toolBar = (Toolbar) findViewById(R.id.my_toolbar);
+        setSupportActionBar(this.toolBar);
+        getSupportActionBar().setTitle(MyService.title);
+        this.toolBar.setTitleTextColor(ContextCompat.getColor(getApplicationContext(),R.color.white));
+        //  Arrow
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         this.mywebView = (WebView) findViewById(R.id.webView);
         this.mywebView.getSettings().setJavaScriptEnabled(true);

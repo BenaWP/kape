@@ -8,4 +8,8 @@
         <item name="colorPrimary">@color/app_sombre_color</item>
         <item name="colorPrimaryDark">@color/app_sombre_color</item>
     </style>
+
+    <style name="kepaThemeToolbar" parent="ThemeOverlay.MaterialComponents.Toolbar.Primary">
+        <item name="colorOnPrimary">@color/white</item>
+    </style>
 </resources>

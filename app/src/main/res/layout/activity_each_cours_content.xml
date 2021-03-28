@@ -6,8 +6,7 @@
         android:layout_height="?attr/actionBarSize"
         android:background="@color/app_sombre_color"
         android:elevation="4dp"
-        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+        android:theme="@style/kepaThemeToolbar"/>
 
     <WebView
         android:id="@+id/webView"
