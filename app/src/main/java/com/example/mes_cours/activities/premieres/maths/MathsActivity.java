@@ -61,6 +61,7 @@ public class MathsActivity extends AppCompatActivity {
         });
     }
 
+    // arrow back clicked
     public boolean onOptionsItemSelected(MenuItem item){
         switch (item.getItemId()) {
             case android.R.id.home:
