@@ -17,6 +17,8 @@ import com.example.mes_cours.fragments.SecondFragment;
 import com.example.mes_cours.fragments.TerminalFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import java.lang.reflect.Array;
+
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import meow.bottomnavigation.MeowBottomNavigation;
