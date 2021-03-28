@@ -45,7 +45,7 @@ public class ListesMathsNumActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long j) {
                 MyService.title = ListesMathsNumActivity.this.Items.get(i).getItemname();
                 MyService.postion = ListesMathsNumActivity.this.Items.get(i).getUrl();
-                startActivity(new Intent(ListesMathsNumActivity.this, EachCoursContentActivity.class));
+                ListesMathsNumActivity.this.startActivity(new Intent(ListesMathsNumActivity.this, EachCoursContentActivity.class));
             }
         });
     }
