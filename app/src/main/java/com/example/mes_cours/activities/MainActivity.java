@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // Set premiere fragment initially selected
-        meowBottomNavigation.show(2, true);
+        meowBottomNavigation.show(1, true);
 
         meowBottomNavigation.setOnClickMenuListener(new Function1<MeowBottomNavigation.Model, Unit>() {
             @Override
