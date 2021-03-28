@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:background="@layout/corner"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="1">
+    <ImageView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/ItemImg"
+        android:background="@drawable/ic_logo_app"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="20sp"
+            android:textColor="#000"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/ItemTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Episode here"
+            android:layout_weight="0.06"
+            android:layout_toLeftOf="@+id/ItemImg"
+            android:layout_alignParentTop="true"/>
+        <TextView
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="14dp"
+            android:textColor="#000"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/ItemDecs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SQL Tutorial"
+            android:layout_weight="0.03"
+            android:layout_below="@+id/ItemTitle"
+            android:layout_alignRight="@+id/ItemTitle"
+            android:layout_alignParentLeft="true"/>
+    </LinearLayout>
+</LinearLayout>
