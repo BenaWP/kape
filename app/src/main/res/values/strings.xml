@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">kape</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="premiere_titre"><u>Classe de 1ère</u></string>
+    <string name="seconde">Seconde</string>
+    <string name="premiere">Première</string>
+    <string name="terminale">Terminale</string>
+    <string name="lecons_folder_text">Leçons</string>
+    <string name="exercice">Exos</string>
 </resources>

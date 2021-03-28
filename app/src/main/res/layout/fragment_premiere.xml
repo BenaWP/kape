@@ -17,7 +17,7 @@
 
         <ImageView
             android:id="@+id/folder_cours_p"
-            app:srcCompat="@drawable/ic_folder"
+            app:srcCompat="@drawable/ic_lecons_folder"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_gravity="center_horizontal"/>
@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="0dp"
-            android:text="Matières"
+            android:text="@string/lecons_folder_text"
             android:textSize="12sp" />
 
         <ImageView
@@ -36,14 +36,14 @@
             android:layout_height="80dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="50dp"
-            app:srcCompat="@drawable/ic_exo" />
+            app:srcCompat="@drawable/ic_exercise" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="0dp"
-            android:text="Exos"
+            android:text="@string/exercice"
             android:textSize="12sp" />
     </LinearLayout>
 </FrameLayout>

@@ -3,15 +3,15 @@
     <item
         android:id="@+id/navigation_second"
         android:icon="@drawable/ic_second"
-        android:title="Second" />
+        android:title="@string/seconde" />
 
     <item
         android:id="@+id/navigation_premiere"
         android:icon="@drawable/ic_premiere"
-        android:title="Premiere" />
+        android:title="@string/premiere" />
 
     <item
         android:id="@+id/navigation_terminal"
         android:icon="@drawable/ic_terminal"
-        android:title="Terminal" />
+        android:title="@string/terminale" />
 </menu>

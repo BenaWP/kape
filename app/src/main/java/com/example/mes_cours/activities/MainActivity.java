@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         //getting bottom navigation view
         bottomNavigation = findViewById(R.id.bottom_navigation);
         //and attaching the listener
+
         bottomNavigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
