@@ -35,15 +35,19 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:id="@+id/frame_layout" />
+        android:id="@+id/fragment_container" />
 
-    <meow.bottomnavigation.MeowBottomNavigation
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/bottom_navigation"
-        app:mbn_circleColor="@color/white"
-        app:mbn_selectedIconColor="@color/app_sombre_color"
-        app:mbn_defaultIconColor="@color/white"
-        app:mbn_backgroundBottomColor="@color/app_sombre_color"/>
+        android:background="@color/app_sombre_color"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/navigation_items"
+        android:paddingTop="5dp"/>
 
 </LinearLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_second"
+        android:icon="@drawable/ic_second"
+        android:title="Second" />
+
+    <item
+        android:id="@+id/navigation_premiere"
+        android:icon="@drawable/ic_premiere"
+        android:title="Premiere" />
+
+    <item
+        android:id="@+id/navigation_terminal"
+        android:icon="@drawable/ic_terminal"
+        android:title="Terminal" />
+</menu>
