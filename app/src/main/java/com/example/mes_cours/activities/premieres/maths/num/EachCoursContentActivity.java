@@ -40,6 +40,7 @@ public class EachCoursContentActivity extends AppCompatActivity {
         this.mywebView.getSettings().setBuiltInZoomControls(true);
     }
 
+    // arrow back click
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 

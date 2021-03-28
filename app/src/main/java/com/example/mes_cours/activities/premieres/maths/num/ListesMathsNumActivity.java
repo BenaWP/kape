@@ -1,12 +1,17 @@
 package com.example.mes_cours.activities.premieres.maths.num;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -23,6 +28,7 @@ import java.util.ArrayList;
 
 public class ListesMathsNumActivity extends AppCompatActivity {
 
+    Toolbar toolBar;
     ArrayList<ItemBean> Items;
     ArrayAdapter<ItemBean> adapter;
     Context ct;
@@ -31,9 +37,29 @@ public class ListesMathsNumActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_listes_maths_num);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+
+        // -------------Tool bar
+        // 1- text
+        this.toolBar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(this.toolBar);
+        // 2- get app name
+        final PackageManager pm = getApplicationContext().getPackageManager();
+        ApplicationInfo ai;
+        try {
+            ai = pm.getApplicationInfo( this.getPackageName(), 0);
+        } catch (final PackageManager.NameNotFoundException e) {
+            ai = null;
+        }
+        final String applicationName = (String) (ai != null ? pm.getApplicationLabel(ai) : "(unknown)");
+        getSupportActionBar().setTitle(applicationName);
+        this.toolBar.setTitleTextColor(ContextCompat.getColor(getApplicationContext(),R.color.white));
+        //  3- Arrow
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        // -------------End Tool bar
+
         this.lvItem = (ListView) findViewById(R.id.lvItems);
         this.ct = getApplicationContext();
         this.Items = new ArrayList<>();
@@ -48,6 +74,17 @@ public class ListesMathsNumActivity extends AppCompatActivity {
                 ListesMathsNumActivity.this.startActivity(new Intent(ListesMathsNumActivity.this, EachCoursContentActivity.class));
             }
         });
+    }
+
+    // arrow back click
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                finish();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     public void addItems() {
