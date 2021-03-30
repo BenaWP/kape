@@ -1,17 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/navigation_second"
         android:icon="@drawable/ic_second"
-        android:title="@string/seconde" />
+        android:title="@string/seconde"
+        app:cnb_backgroundColor="@color/app_sombre_color"
+        app:cnb_iconColor="@color/white"
+        app:cnb_textColor="@color/white"/>
 
     <item
         android:id="@+id/navigation_premiere"
         android:icon="@drawable/ic_premiere"
-        android:title="@string/premiere" />
+        android:title="@string/premiere"
+        app:cnb_backgroundColor="@color/app_sombre_color"
+        app:cnb_iconColor="@color/white"
+        app:cnb_textColor="@color/white"/>
 
     <item
         android:id="@+id/navigation_terminal"
         android:icon="@drawable/ic_terminal"
-        android:title="@string/terminale" />
+        android:title="@string/terminale"
+        app:cnb_backgroundColor="@color/app_sombre_color"
+        app:cnb_iconColor="@color/white"
+        app:cnb_textColor="@color/white"/>
 </menu>

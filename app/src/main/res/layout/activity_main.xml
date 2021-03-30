@@ -10,14 +10,13 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="@color/app_sombre_color">
+        android:layout_height="?attr/actionBarSize">
 
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/logo_image"
-            app:srcCompat="@drawable/ic_logo_app_light"
+            app:srcCompat="@drawable/ic_logo_app"
             android:layout_marginRight="5dp" />
 
         <TextView
@@ -25,7 +24,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/app_name"
-            android:textColor="@color/white"
+            android:textColor="@color/app_sombre_color"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -35,20 +34,14 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:id="@+id/fragment_container" />
+        android:id="@+id/fragment_container"
+        android:background="@color/fragment_container_bg_color"/>
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation"
+    <com.ismaeldivita.chipnavigation.ChipNavigationBar
+        android:id="@+id/chipNavigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/app_sombre_color"
-        app:itemIconTint="@color/app_fafa_color"
-        app:itemTextColor="@color/app_fafa_color"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:menu="@menu/navigation_items"
-        android:paddingTop="5dp"
-        android:paddingBottom="3dp"/>
-
+        android:layout_alignParentBottom="true"
+        app:cnb_menuResource="@menu/navigation_items"
+        app:cnb_unselectedColor="@color/app_sombre_color"/>
 </LinearLayout>

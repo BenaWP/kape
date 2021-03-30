@@ -12,5 +12,6 @@
     <color name="app_second_color">#A63C415E</color>
     <color name="app_sombre_color">#3c415e</color>
     <color name="app_fafa_color">#e1e1e1</color>
+    <color name="fragment_container_bg_color">#F3F3F3</color>
 
 </resources>

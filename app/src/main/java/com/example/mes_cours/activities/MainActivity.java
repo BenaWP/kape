@@ -16,6 +16,7 @@ import com.example.mes_cours.fragments.PremiereFragment;
 import com.example.mes_cours.fragments.SecondFragment;
 import com.example.mes_cours.fragments.TerminalFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.ismaeldivita.chipnavigation.ChipNavigationBar;
 
 import java.lang.reflect.Array;
 
@@ -25,7 +26,7 @@ import meow.bottomnavigation.MeowBottomNavigation;
 
 public class MainActivity extends AppCompatActivity {
     // Initialize variable
-    BottomNavigationView bottomNavigation;
+    ChipNavigationBar bottomNavigation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,13 +44,16 @@ public class MainActivity extends AppCompatActivity {
         loadFragment(new SecondFragment());
 
         //getting bottom navigation view
-        bottomNavigation = findViewById(R.id.bottom_navigation);
-        //and attaching the listener
+        bottomNavigation = findViewById(R.id.chipNavigation);
 
-        bottomNavigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+        // Set second default item active
+        bottomNavigation.setItemEnabled(R.id.navigation_second,  true);
+
+        //and attaching the listener
+        bottomNavigation.setOnItemSelectedListener(new ChipNavigationBar.OnItemSelectedListener() {
             @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()) {
+            public void onItemSelected(int i) {
+                switch (i) {
                     case R.id.navigation_second:
                         loadFragment(new SecondFragment());
                         break;
@@ -60,7 +64,6 @@ public class MainActivity extends AppCompatActivity {
                         loadFragment(new TerminalFragment());
                         break;
                 }
-                return false;
             }
         });
     }
